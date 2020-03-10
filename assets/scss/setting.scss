@@ -1,0 +1,56 @@
+$navbar-height: 120px;
+
+@mixin transition {
+  transition: all .3s ease-in-out;
+}
+
+@mixin fadeIn {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@mixin shadow {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1),
+              0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slideUp {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes wavesEffect {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(100);
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.fadeOut {
+  animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+.slideUp {
+  animation: slideUp 0.3s ease-in-out forwards;
+}
+
+.shadow {
+  @include shadow;
+}

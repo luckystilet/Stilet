@@ -1,0 +1,164 @@
+@import '../setting.scss';
+@import '../color.scss';
+@import '../default.scss';
+
+$tablet-size: 1240px;
+$phone-size: 767px;
+$big-phone-size: 540px;
+$mini-phone-size: 420px;
+$phone-modal-width: 374px;
+
+$mobile-popup: 1200px;
+$small-popup: 300px;
+
+// ################   Blocks Settings   ################
+$blockBDRS: 15px;
+$blockShadow: 0px 0px 15px rgba(74, 141, 255, 0.15);
+$bdrs: 5px;
+$inputs-width: 22.8rem;
+
+// ################   Colored Colors   ################
+$active: #FCA311;
+$golden-tainoi: #FFCE56;
+$anakiwa: #84E7FF;
+$onahau: #C2F3FF;
+$aquamarine: #4FFAD1;
+$lily-white: #E9F9FF;
+$cobalt: #003FA9;
+$dodger-blue: #4A8DFF;
+$error: #EB5757;
+
+$bright-gray: #343C4B;
+$lily-white: #E9F9FF;
+$solitude: #E2EEFF;
+
+// ################   Gray Colors   ################
+$wild-sand: #F6F6F6;
+$concrete: #F2F2F2;
+$alto-2: #E0E0E0;
+$gallery: #EBEBEB;
+$alto: #D7D7D7;
+$silver: #BDBDBD;
+$gray: #828282;
+$emperor: #4F4F4F;
+$mine-shaft-3: #303030;
+$mine-shaft: #202020;
+$cod-gray: #111111;
+
+// ################   Gradients   ################
+$sidebarBG: linear-gradient(#94F9FF 0%, #93E3FF 100%);
+
+
+.footer{
+  padding-bottom: 1.25em;
+  // position: relative;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #D7D7D7;
+    padding: 2em 3em;
+    border-radius: 5px;
+  }
+  &__logo {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    img {
+      width: 100%;
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &__privacy-politic{
+    color: $cod-gray;
+    font-size: 1.2rem;
+    line-height: 1;
+  }
+  &-social{
+    &__list{
+      display: flex;
+      margin-bottom: 3.6rem;
+    }
+    &__item{
+      width: 40px;
+      height: 40px;
+      margin-right: .9rem;
+      background-color: $aquamarine;
+      border-radius: 50%;
+      &:last-child{
+        margin-right: 0;
+        display: none;
+      }
+    }
+    &__link{
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center .6rem;
+      background-size: 2rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &-menu{
+    &__list{
+      display: flex;
+    }
+    &__item{
+      margin-right: 2.4rem;
+      &:last-child{
+          margin-right: 0;
+      }
+    }
+    &__link{
+      color: $cod-gray;
+      font-size: 13px;
+      line-height: 1;
+    }
+  }
+  //############ mobile ################
+  &__personal-area{
+    width: 40px;
+    height: 40px;
+    flex-grow: 0;
+    background-color: $active;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .footer {
+    &-menu__list {
+      display: none !important;
+    }
+    &__logo {
+      align-items: flex-start;
+      width: 40px;
+    }
+    &__privacy-politic {
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      left: 0;
+      font-size: 0.85em;
+    }
+    &-social {
+      &__item {
+        display: none !important;
+        &:last-child {
+          display: block !important;
+          background: orange;
+        }
+      }
+    }
+  }
+}

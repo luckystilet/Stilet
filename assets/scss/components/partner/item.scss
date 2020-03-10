@@ -1,0 +1,12 @@
+@import '../../default.scss';
+@import '../../color.scss';
+@import '../../setting.scss';
+
+.partner-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  img {
+    width: 100%;
+  }
+}

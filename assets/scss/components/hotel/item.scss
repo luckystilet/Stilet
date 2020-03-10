@@ -1,0 +1,50 @@
+@import '../../setting.scss';
+@import '../../default.scss';
+@import '../../color.scss';
+
+.hotel-item {
+  min-height: 215px;
+  background-color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  @include shadow;
+  @include transition;
+  overflow: hidden;
+  position: relative;
+  img {
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  &-desc {
+    padding: 1em;
+    position: relative;
+    h3 {
+      margin: 1em 0;
+      backface-visibility: hidden;
+    }
+    &-bottom {
+      display: flex;
+      margin: 1em 0;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      &-stars {
+        display: flex;
+        width: 80%;
+      }
+    }
+    small {
+      color: grey;
+      font-size: 11px;
+      font-weight: 600;
+      position: absolute;
+      right: 1em;
+      bottom: 1em;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.05) translate3d(0,0,0);
+  }
+}

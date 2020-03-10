@@ -1,0 +1,29 @@
+@import '../../setting.scss';
+@import '../../default.scss';
+@import '../../color.scss';
+
+.hotel-view {
+  margin-bottom: 5em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3em;
+  grid-auto-rows: minmax(200px, auto);
+}
+
+@media screen and (max-width: 900px) {
+  .hotel-view {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hotel-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hotel-view {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

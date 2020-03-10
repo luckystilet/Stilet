@@ -1,0 +1,49 @@
+@import '../setting.scss';
+@import '../default.scss';
+@import '../color.scss';
+
+.switcher-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .lang {
+    margin-bottom: 0.5em;
+    span {
+      @include transition;
+      &.active {
+        color: orange;
+      }
+    }
+  }
+
+  .switcher {
+    width: calc(48px + 0.3em);
+    height: calc(24px + 0.3em);
+    background: orange;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    @include transition;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+    &:hover {
+      background: lighten(orange, 10); 
+    }
+    .circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #fff;
+      @include transition;
+      margin-left: 0.15em;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      &.left {
+        margin-left: 0.15em;
+      }
+      &.right {
+        margin-left: calc(24px + 0.15em);
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import './setting.scss';
+
+$blue: #2E73D9;
+$blue-light: #4597FF;
+
+$orange: #FCA311;
+$orange-accent: #FFCE56;
+$orange-light: #FFE15A;
+
+$grey-light: #E0E0E0;
+$grey-accent: #F6F6F6;
+
+// Stilet code start
+// ################   Colored Colors   ################
+$active: #FCA311;
+$golden-tainoi: #FFCE56;
+$anakiwa: #84E7FF;
+$onahau: #C2F3FF;
+$aquamarine: #4FFAD1;
+$green: #00FE38;
+$lily-white: #E9F9FF;
+$cobalt: #003FA9;
+$mariner: #2E73D9;
+$dodger-blue: #4A8DFF;
+$error: #EB5757;
+
+$bright-gray: #343C4B;
+$lily-white: #E9F9FF;
+$solitude: #E2EEFF;
+
+// ################   Gray Colors   ################
+$wild-sand: #F6F6F6;
+$concrete: #F2F2F2;
+$alto-2: #E0E0E0;
+$gallery: #EBEBEB;
+$alto: #D7D7D7;
+$silver: #BDBDBD;
+$gray: #828282;
+$emperor: #4F4F4F;
+$mine-shaft-3: #303030;
+$mine-shaft: #202020;
+$cod-gray: #111111;
+
+// ################   Gradients   ################
+$sidebarBG: linear-gradient(#94F9FF 0%, #93E3FF 100%);
+$text-gradient: linear-gradient(180deg, #4A8DFF 0%, #4DBDED 100%);
+$gradient-scroll: linear-gradient(0deg, #84E7FF 0%, #4A8DFF 100%);
+$advantageBG: linear-gradient(90deg, #C6F4FF 4.78%, #C6D9FF 100%);
+$sidebarBG-orange: linear-gradient(180deg, #FCA311 28.3%, #FFE15A 99.53%);
+// Stilet code end
+.bg {
+  &-blue {
+    &-gradient {
+      background: linear-gradient(45deg, $blue, $blue-light);
+      button, span {
+        color: white;
+      }
+      &:hover {
+        background: $blue;
+      }
+    }
+  }
+  &-orange {
+    background: $orange-accent;
+    color: #202020;
+    &-gradient {
+      background: linear-gradient(180deg, $orange, $orange-light);
+      button, span {
+        color: white;
+      }
+      &:hover {
+        background: $orange;
+      }
+    }
+  }
+  &-grey {
+    &-light {
+      background: $grey-light;
+    }
+  }
+  &-white {
+    background: #fff;
+    color: $blue;
+  }
+}

@@ -1,0 +1,57 @@
+/* Helvetica Font */
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/Helvetica/HelveticaLight/HelveticaLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/Helvetica/HelveticaRegular/HelveticaRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/Helvetica/HelveticaMedium/HelveticaMedium.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/Helvetica/HelveticaBold/HelveticaBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/Helvetica/HelveticaHeavy/HelveticaHeavy.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/Helvetica/HelveticaBlack/HelveticaBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: bold;
+}
+
+/* Montaga Font */
+@font-face {
+  font-family: 'Montaga';
+  src: url('/fonts/Montaga/MontagaRegular/Montaga-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Holland';
+  src: url('/fonts/Holland.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
