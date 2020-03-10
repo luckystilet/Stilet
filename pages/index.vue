@@ -5,7 +5,9 @@
       <c-progress-bar :progress="progress" />
       <!-- <c-box-view @nextStep="nextStep" /> -->
       <c-filters-view />
-      <c-button v-waves:color="'blue'" title="Поиск предложений" class="bg-white btn-large shadow round-15" @click="SearchData"/>
+      <c-button v-waves:color="'blue'" title="Поиск предложений" class="btn--blue" @click="SearchData"/>
+      
+      <c-checkbox>Test</c-checkbox>
     </section>
 
     <section class="search-results-container">
@@ -98,10 +100,8 @@ export default {
 
 <style lang="scss" scoped>
 .search-container {
-  margin-top: 2em;
-  button {
-    margin-top: 5em;
-    left: calc(30%);
+  .btn{
+    margin-left: auto;
   }
   h1 {
     font-size: 2em;

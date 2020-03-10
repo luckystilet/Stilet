@@ -20,6 +20,7 @@ import Calendar from '@/components/Calendar';
 // Stilet code below
 import FiltersView from '@/components/Filters/FiltersView';
 import FiltersItem from '@/components/Filters/FiltersItem';
+import Checkbox from '@/components/Checkbox';
 
 Vue.component('icon', Icon);
 Vue.component('c-navbar', Navbar);
@@ -41,3 +42,4 @@ Vue.component('c-calendar', Calendar);
 // Stilet code below
 Vue.component('c-filters-view', FiltersView);
 Vue.component('c-filters-item', FiltersItem);
+Vue.component('c-checkbox', Checkbox);
