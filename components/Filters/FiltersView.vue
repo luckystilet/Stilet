@@ -3,6 +3,7 @@
     <c-filters-item
       v-for="(el, i) in filtersData" :key="i"
       :data="el"
+      :type="'box-'+(i+1)"
     ></c-filters-item>
   </div>
 </template>
@@ -43,10 +44,10 @@
   }
 </script>
 <style scoped lang="scss">
+  @import '../../assets/scss/vars';
   .filters{
     display: flex;
-    /*justify-content: space-around;*/
     flex-wrap: wrap;
-    margin: 0 -5px;
+    margin: 0 -$filters-item-margin;
   }
 </style>
