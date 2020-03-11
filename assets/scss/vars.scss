@@ -1,0 +1,51 @@
+// ################   Media   ################
+$tablet-size: 1240px;
+$phone-size-big: 767px;
+$phone-size: 540px;
+$phone-size-small: 420px;
+
+$phone-modal-width: 374px;
+$mobile-popup: 1200px;
+$small-popup: 300px;
+
+// ################   Blocks Settings   ################
+$block-bdrs: 15px;
+$blockShadow: 0px 0px 15px rgba(74, 85, 105, 0.15);
+$bdrs: 5px;
+$inputs-width: 22.8rem;
+
+// ################   Colored Colors   ################
+$active: #FCA311;
+$golden-tainoi: #FFCE56;
+$anakiwa: #84E7FF;
+$onahau: #C2F3FF;
+$aquamarine: #4FFAD1;
+$green: #00FE38;
+$cobalt: #003FA9;
+$mariner: #2E73D9;
+$dodger-blue: #4A8DFF;
+$error: #EB5757;
+
+$bright-gray: #343C4B;
+$lily-white: #E9F9FF;
+$solitude: #E2EEFF;
+
+// ################   Gray Colors   ################
+$wild-sand: #F6F6F6;
+$concrete: #F2F2F2;
+$alto-2: #E0E0E0;
+$gallery: #EBEBEB;
+$alto: #D7D7D7;
+$silver: #BDBDBD;
+$gray: #828282;
+$emperor: #4F4F4F;
+$mine-shaft-3: #303030;
+$mine-shaft: #202020;
+$cod-gray: #111111;
+
+// ################   Gradients   ################
+$sidebarBG: linear-gradient(#94F9FF 0%, #93E3FF 100%);
+$text-gradient: linear-gradient(180deg, #4A8DFF 0%, #4DBDED 100%);
+$gradient-scroll: linear-gradient(0deg, #84E7FF 0%, #4A8DFF 100%);
+$advantageBG: linear-gradient(90deg, #C6F4FF 4.78%, #C6D9FF 100%);
+$sidebarBG-orange: linear-gradient(180deg, #FCA311 28.3%, #FFE15A 99.53%);
