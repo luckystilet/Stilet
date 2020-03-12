@@ -1,13 +1,23 @@
 <template>
   <label class="c-checkbox">
-    <input type="checkbox">
+    <input type="checkbox" @change="changeHandler($event)" :checked="checked">
     <span></span><slot></slot>
   </label>
 </template>
 
 <script>
 export default {
-  name: "c-checkbox"
+  name: "c-checkbox",
+  props: {
+    checked: {
+      default: false
+    }
+  },
+  methods: {
+    changeHandler(e){
+      this.$emit('checking',e.target.checked)
+    }
+  },
 }
 </script>
 
@@ -20,6 +30,9 @@ export default {
     cursor: pointer;
     user-select: none;
     white-space: nowrap;
+    &.back{
+      color: #000;
+    }
     span{
       position: relative;
       display: inline-block;
@@ -50,7 +63,7 @@ export default {
         background-image: url('../static/icons/v.svg');
       }
     }
-    &.bd-black{
+    &.black{
       span{
         border: 1px solid #000000;
       }

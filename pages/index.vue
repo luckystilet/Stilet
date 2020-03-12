@@ -3,11 +3,9 @@
     <section class="search-container">
       <h1>Найди свой пакетный тур в Египет</h1>
       <c-progress-bar :progress="progress" />
-      <!-- <c-box-view @nextStep="nextStep" /> -->
+<!--       <c-box-view @nextStep="nextStep" />-->
       <c-filters-view />
       <c-button v-waves:color="'blue'" title="Поиск предложений" class="btn--blue" @click="SearchData"/>
-      
-      <c-checkbox>Test</c-checkbox>
     </section>
 
     <section class="search-results-container">

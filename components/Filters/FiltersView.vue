@@ -3,7 +3,7 @@
     <c-filters-item
       v-for="(el, i) in filtersData" :key="i"
       :data="el"
-      :type="'box-'+(i+1)"
+      :id="i+1"
     ></c-filters-item>
   </div>
 </template>

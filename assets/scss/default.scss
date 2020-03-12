@@ -29,9 +29,9 @@ h5,
 h6{
   margin: 0;
 }
-::-webkit-scrollbar{
-  width: 0;
-}
+//::-webkit-scrollbar{
+//  width: 0;
+//}
 #app{
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
