@@ -5,6 +5,7 @@
       <c-progress-bar :progress="progress" />
 <!--       <c-box-view @nextStep="nextStep" />-->
       <c-filters-view />
+
       <c-button v-waves:color="'blue'" title="Поиск предложений" class="btn--blue" @click="SearchData"/>
     </section>
 
@@ -28,10 +29,17 @@
 </template>
 
 <script>
-import axios from 'axios';
-import { Countries, Search } from '../services/search.service';
+// import axios from 'axios';
+// import { Countries, Search } from '../services/search.service';
 
 export default {
+  // async fetch({store}){
+  //   console.log(" async fetch running",       );
+  //   if(store.getters['countries'].length === 0){
+  //     console.log('IF',     )
+  //     await this.$store.dispatch('fetchCountries')
+  //   }
+  // },
   data: () => ({
     hotels: [
       {
@@ -81,16 +89,16 @@ export default {
       this.searchPackage = {...this.searchPackage, ...data.package};
     },
     SearchData () {
-      let pack = this.searchPackage;
-      this.startSearching = true;
-      console.log(pack);
-
-      Search(pack.Country, pack.City, pack.citiesFrom[0], pack.DateFrom, pack.DateTo, pack.Adults, pack.Currency, pack.Meals, pack.HotelCategory).then((data) => {
-        this.searched = data.result;
-        this.startSearching = false;
-      }).catch((err) => {
-        console.log(err);
-      })
+      // let pack = this.searchPackage;
+      // this.startSearching = true;
+      // console.log(pack);
+      //
+      // Search(pack.Country, pack.City, pack.citiesFrom[0], pack.DateFrom, pack.DateTo, pack.Adults, pack.Currency, pack.Meals, pack.HotelCategory).then((data) => {
+      //   this.searched = data.result;
+      //   this.startSearching = false;
+      // }).catch((err) => {
+      //   console.log(err);
+      // })
     }
   }
 }

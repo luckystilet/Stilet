@@ -1,7 +1,7 @@
 <template>
   <ul class="chips__list">
     <li
-      class="chips__item"
+      class="chips__item fadeIn"
       v-for="(el, i) in data" :key="i"
       @click="clickHandler(el)"
     >{{el.name}}<span>&times;</span></li>

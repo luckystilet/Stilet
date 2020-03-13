@@ -48,8 +48,4 @@
     },
   }
 </script>
-<style scoped lang="scss">
-  .filters-item-content{
-    width: 420px;
-  }
-</style>
+<style scoped lang="scss"></style>

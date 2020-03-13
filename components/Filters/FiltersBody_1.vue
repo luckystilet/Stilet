@@ -38,10 +38,15 @@
           <li
             class="filters-item-content-country__item"
             v-for="(country, i) in fetchedCountries" :key="i"
+            @click="countrySelection(country.tpg_id, i)"
+            :class="{active: selectedCountry === i}"
           >
             <span v-if="i===0" class="filters-item-content-country__unknown">?</span>
-            <img v-else :src="`flags/${country.tpg_id}.png`" alt=""
-                 class="filters-item-content-country__img">
+            <img
+              v-else
+              :src="`flags/${country.tpg_id}.png`"
+              alt=""
+              class="filters-item-content-country__img">
             {{country.name}}
           </li>
         </ul>
@@ -51,7 +56,7 @@
         <ul class="filters-item-content-city__list scroll">
           <li
             class="filters-item-content-city__item"
-            v-for="(city, i) in cities" :key="i"
+            v-for="(city, i) in fetchedCities" :key="i"
           >
             <c-checkbox
               class="black"
@@ -66,7 +71,7 @@
   </div>
 </template>
 <script>
-  import {Countries} from '../../services/search.service'
+  // import {Countries} from '../../services/search.service'
 
   export default {
     name: 'c-filters-body_1',
@@ -165,8 +170,17 @@
         }
       ],
       selectedCities: [],
-      fetchedCountries: []
+      selectedCountry: -1
     }),
+    computed: {
+      fetchedCountries(){
+        return this.$store.getters['countries'].countries
+      },
+      fetchedCities(){
+        console.log("this.$store.getters['cities'].cities",   this.$store.getters['cities'].cities    );
+        return this.$store.getters['cities'].cities
+      }
+    },
     methods: {
       toggleCity(e, city) {
         let checked = e || false
@@ -177,24 +191,19 @@
         }
       },
       removeChip(e){
-        console.log("removeChip",       );
         this.selectedCities = this.selectedCities.filter(c=>+c.id!==+e.id)
+      },
+      countrySelection(countryId, selectedCountry){
+        this.$store.dispatch('fetchCities', {countryId: parseInt(countryId, 10)})
+        this.selectedCountry = selectedCountry
       }
     },
-    
-    
-    
-    mounted(){
-      Countries()
-        .then((data) => {
-          this.fetchedCountries = data.countries;
-        }).catch((err) => {
-        console.log(err);
-      });
-      setTimeout(()=>{
-        console.log("fetchedCountries",   this.fetchedCountries);
-      },1000)
-    },
+    mounted() {
+      if(this.$store.getters['countries'].length === 0){
+        console.log('IF',     )
+        this.$store.dispatch('fetchCountries')
+      }
+    }
   }
 </script>
 <style scoped lang="scss">
@@ -203,6 +212,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
+    width: 400px;
   }
   .filters-item-content{
     &-checkbox{
@@ -247,9 +257,23 @@
       &__item{
         display: flex;
         align-items: center;
-        margin-bottom: 8px;
-        &:last-child{
-          margin-bottom: 0;
+        padding: 4px 0;
+        cursor: pointer;
+        &.active{
+          color: $cobalt;
+          position: relative;
+          &:before{
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background-color: $cobalt;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            top: 50%;
+            left: -15px;
+          }
+          
         }
       }
       &__img{
@@ -273,6 +297,7 @@
         margin-top: 15px;
         max-height: 160px;
         overflow-y: scroll;
+        overflow-x: hidden;
       }
       &__item{
         margin-bottom: 6px;
