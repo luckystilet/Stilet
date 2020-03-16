@@ -1,7 +1,7 @@
 <template>
   <label class="c-checkbox">
     <input type="checkbox" @change="changeHandler($event)" :checked="checked">
-    <span></span><slot></slot>
+    <span class="c-checkbox__body"></span><slot></slot>
   </label>
 </template>
 
@@ -23,7 +23,6 @@ export default {
 
 <style scoped lang="scss">
   @import '../assets/scss/vars';
-  
   .c-checkbox{
     position: relative;
     display: inline-flex;
@@ -34,7 +33,7 @@ export default {
     &.back{
       color: #000;
     }
-    span{
+    &__body{
       position: relative;
       display: inline-block;
       height: 16px;

@@ -22,9 +22,13 @@ import SearchResult from '@@/components/SearchResult'
 import Calendar from '@@/components/Calendar'
           // Stilet code below
           /**Global components*/
+import Sidebar from '@@/components/Sidebar'
+import AppButton from '@@/components/AppButton'
+import AppIcon from '@@/components/AppIcon'
 import Checkbox from '@@/components/Checkbox'
 import Search from '@@/components/Search'
 import Chips from '@@/components/Chips'
+import Select from '@@/components/Select'
           /**Local components*/
 import FiltersView from '@@/components/Filters/FiltersView'
 import FiltersItem from '@@/components/Filters/FiltersItem'
@@ -55,11 +59,15 @@ Vue.component('c-box-view', BoxView)
 Vue.component('c-box-item', BoxItem)
 Vue.component('c-search-result', SearchResult)
 Vue.component('c-calendar', Calendar)
-          // Stilet code below
+// Stilet code below
           /**Global components*/
+Vue.component('c-sidebar', Sidebar)
 Vue.component('c-checkbox', Checkbox)
 Vue.component('c-search', Search)
 Vue.component('c-chips', Chips)
+Vue.component('c-select', Select)
+Vue.component('AppButton', AppButton)
+Vue.component('AppIcon', AppIcon)
           /**Local components*/
 Vue.component('c-filters-view', FiltersView)
 Vue.component('c-filters-item', FiltersItem)

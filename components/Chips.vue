@@ -18,7 +18,10 @@
     },
     methods: {
       clickHandler(el){
-        this.$emit('removeChip',el)
+        // Таймаут, чтоб корректно отработал клик вне блока у родительского компонента.
+        setTimeout(()=>{
+          this.$emit('removeChip',el)
+        },0)
       }
     },
   }

@@ -3118,11 +3118,6 @@ data-urls@^1.0.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-date-fns@^2.6.0:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.11.0.tgz#ec2b44977465b9dcb370021d5e6c019b19f36d06"
-  integrity sha512-8P1cDi8ebZyDxUyUprBXwidoEtiQAawYPGvpfb+Dg0G6JrQ+VozwOmm91xYC0vAv1+0VmLehEPb+isg4BGUFfA==
-
 de-indent@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
@@ -6680,11 +6675,6 @@ pn@^1.1.0:
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
   integrity sha512-2qHaIQr2VLRFoxe2nASzsV6ef4yOOH+Fi9FBOVH6cqeSgUnoyySPZkxzLuzd+RYOQTRpROA0ztTMqxROKSb/nA==
 
-popper.js@^1.14.7:
-  version "1.16.1"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
-  integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
-
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
@@ -9112,20 +9102,6 @@ uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
-v-calendar@^1.0.0-beta.23:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/v-calendar/-/v-calendar-1.0.1.tgz#40092c7d4475f3183350b42471af81759c9a8600"
-  integrity sha512-TIaB2ASVBv7DzRIzpSwE33khQlnyTi5U4lBzxY1mP7Zz1nv6f3wW/WOhNGBsWhVkXERU6tuc3/7gwaybNJY+vQ==
-  dependencies:
-    date-fns "^2.6.0"
-    lodash "^4.17.11"
-    popper.js "^1.14.7"
-
-v-click-outside@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/v-click-outside/-/v-click-outside-3.0.1.tgz#95870c199726069f4eda7eb5781ade62526dd269"
-  integrity sha512-FITcAM0R3JEPUSGiO7hfhKDODZHkOQTk/FyI9mwxNcz6LbMbJhABhjevLI5VsU00PRksloQx8vmpFIqlAfX6nw==
-
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz#fc91f6b9c7ba15c857f4cb2c5defeec39d4f410a"
@@ -9167,11 +9143,6 @@ vue-client-only@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"
   integrity sha512-arhk1wtWAfLsJyxGMoEYhoBowM87/i6HLSG2LH/03Yog6i2d9JEN1peMP0Ceis+/n9DxdenGYZZTxbPPJyHciA==
-
-vue-datepicker-ui@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/vue-datepicker-ui/-/vue-datepicker-ui-0.1.2.tgz#afe9e163c9bf6e4f834392cd2c9ba3a1bbfe7f91"
-  integrity sha512-VRD3B6VlwD9bQarcq9W50Jaj1wwy3KF2MFCTBjN2BcFY/2+h+6MMDyzM2xUx+E63R2L1Z+P2HN0F/wNpR1Djzg==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
