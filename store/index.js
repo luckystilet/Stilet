@@ -15,7 +15,6 @@ export const mutations = {
 export const actions = {
   async fetchCountries({commit}){
     try{
-      console.log("fetchCountries",       );
       const countries = await this.$axios.$get('https://api.choother.com/countries', {
         headers: {
           'x-choother-key': '123123'
@@ -26,7 +25,6 @@ export const actions = {
   },
   async fetchCities({commit}, payload){
     try{
-      console.log("fetchCities",       );
       const cities = await this.$axios.$get(`https://api.choother.com/cities/${payload.countryId}`, {
         headers: {
           'x-choother-key': '123123'

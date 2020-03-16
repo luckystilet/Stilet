@@ -1,9 +1,6 @@
 import Vue from 'vue'
-import Store from './store'
-/**Libs*/
-import vClickOutside from 'v-click-outside'
 
-Vue.directive('click-outside', vClickOutside.directive)
+/**Libs*/
 
 /**Components*/
 import Icon from '@@/components/Icon'

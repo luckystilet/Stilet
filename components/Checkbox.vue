@@ -25,6 +25,7 @@ export default {
   @import '../assets/scss/vars';
   
   .c-checkbox{
+    position: relative;
     display: inline-flex;
     align-items: center;
     cursor: pointer;

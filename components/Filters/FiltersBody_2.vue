@@ -4,7 +4,7 @@
       :data="selectedCities"
       @removeChip="removeChip($event)"
     ></c-chips>
-    <c-search placeholder="Введите название города или курорта"></c-search>
+    <c-search placeholder="Откуда Летим?"></c-search>
     <div class="content-field">
       <div class="block-title-blue">Город</div>
       <ul class="filters-item-content-city__list scroll">
@@ -63,6 +63,9 @@
     .content-field{
       justify-content: flex-start;
       flex-direction: column;
+    }
+    &__body{
+      margin-top: -22px;
     }
     &-city{
       &__list{

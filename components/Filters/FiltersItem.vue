@@ -1,18 +1,22 @@
 <template>
   <div class="filters-item">
-    <div class="filters-item-top" @click="toggleModal">
+    <div class="filters-item-top" @click="popupHandler">
       <img :src="require(`@/static/icons/filters/${data.iconPath}.svg`)" :alt="data.title"
            class="filters-item-top__img">
       <div class="filters-item-top__title">{{data.title}}</div>
       <img :src="require('@@/static/icons/control/arrow-down.svg')" alt="" class="filters-item-body__control">
     </div>
-    <div v-if="isOpen" class="filters-item__overlay fadeIn"></div>
+    <div
+      v-show="isOpen"
+      class="filters-item__overlay fadeIn"
+      @mousedown="popupHandler"
+    ></div>
     <div
       class="filters-item-content fadeIn"
-      v-if="isOpen"
-      v-click-outside="toggleModal"
+      v-show="isOpen"
+      ref="popupBody"
     >
-      <div class="filters-item-content__close" @click="toggleModal">
+      <div class="filters-item-content__close" ref="close">
         <div class="filters-item-content__close-inner">
           <span></span><span></span>
         </div>
@@ -42,8 +46,30 @@
       }
     },
     methods: {
-      toggleModal() {
-        this.isOpen = !this.isOpen
+      popupHandler(){
+        const popup = this.$refs.popupBody
+        const close = this.$refs.close
+        
+        let togglePopup = ()=>{
+          this.isOpen=!this.isOpen
+        }
+  
+        togglePopup()
+        function clickHandler(e){
+          console.log("clickHandler",       );
+          const target = e.target
+          
+          let its_close = target === close || close.contains(target)
+          let its_popup = target === popup || popup.contains(target)
+          if (!its_popup || its_close) {
+            togglePopup()
+            console.log("remove",       );
+            document.removeEventListener('click', clickHandler)
+          }
+        }
+        setTimeout(()=>{
+          document.addEventListener('click', clickHandler)
+        },0)
       }
     },
   }

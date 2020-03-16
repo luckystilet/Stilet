@@ -72,7 +72,6 @@
 </template>
 <script>
   // import {Countries} from '../../services/search.service'
-
   export default {
     name: 'c-filters-body_1',
     props: {
@@ -173,34 +172,32 @@
       selectedCountry: -1
     }),
     computed: {
-      fetchedCountries(){
+      fetchedCountries() {
         return this.$store.getters['countries'].countries
       },
-      fetchedCities(){
-        console.log("this.$store.getters['cities'].cities",   this.$store.getters['cities'].cities    );
+      fetchedCities() {
         return this.$store.getters['cities'].cities
       }
     },
     methods: {
       toggleCity(e, city) {
         let checked = e || false
-        if(checked){
+        if (checked) {
           this.selectedCities.push({name: city.name, id: city.id})
-        }else{
-          this.selectedCities = this.selectedCities.filter(c=>c.id!==city.id)
+        } else {
+          this.selectedCities = this.selectedCities.filter(c => c.id !== city.id)
         }
       },
-      removeChip(e){
-        this.selectedCities = this.selectedCities.filter(c=>+c.id!==+e.id)
+      removeChip(e) {
+        this.selectedCities = this.selectedCities.filter(c => +c.id !== +e.id)
       },
-      countrySelection(countryId, selectedCountry){
+      countrySelection(countryId, selectedCountry) {
         this.$store.dispatch('fetchCities', {countryId: parseInt(countryId, 10)})
         this.selectedCountry = selectedCountry
       }
     },
     mounted() {
-      if(this.$store.getters['countries'].length === 0){
-        console.log('IF',     )
+      if (this.$store.getters['countries'].length === 0) {
         this.$store.dispatch('fetchCountries')
       }
     }
@@ -215,6 +212,9 @@
     width: 400px;
   }
   .filters-item-content{
+    &__body{
+      margin-top: -22px;
+    }
     &-checkbox{
       &__group{
         display: flex;
@@ -273,7 +273,6 @@
             top: 50%;
             left: -15px;
           }
-          
         }
       }
       &__img{
